@@ -1,0 +1,21 @@
+public class Test2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub	
+
+				double[] x = {327, 381, 891, 918, 212, 848, 770, 363, 416, 736};
+				double [] y= new double[10];				
+				double max = 0;
+				for(int i=0; i<x.length; i++)
+				{		   
+				    if(x[i] > max)
+				       max = x[i];
+				};
+					System.out.println ("Max " + max);					
+					for(int i=0; i<x.length; i++)
+					{
+						y[i]=x[i]/max;
+						  System.out.format("%.f%n", y[i]);
+					};	
+			}
+}
