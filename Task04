@@ -1,0 +1,37 @@
+import java.util.Random;
+
+public class Test2 {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		int a = 5;
+		int[][] x = new int[a][a];
+		int[] m = new int[a];
+		Random rn = new Random();
+
+		for (int i = 0; i < a; i++) {
+			for (int f = 0; f < a; f++) {
+				x[i][f] = rn.nextInt(100) + 1;
+				;
+				System.out.print(x[i][f] + " ");
+			}
+			;
+			System.out.println();
+		}
+		;
+		for (int i = 0; i < a; i++) {
+			int max = 0;
+			for (int f = 0; f < a; f++) {
+				if (x[f][i] > max)
+					max = x[f][i];
+			}
+			;
+			m[i] = max;
+		}
+		;
+		for (int i = 0; i < a; i++) {
+			System.out.print(m[i] + ", ");
+		}
+		;
+	}
+}
