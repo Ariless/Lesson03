@@ -1,0 +1,36 @@
+public class MainApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int[][] a = { { 18, 11, 5, 4, 11 }, { 18, 1, 6, 7, 2 }, { 2, 14, 14, 10, 12 }, { 13, 5, 11, 19, 19 },
+				{ 6, 6, 13, 13, 16 }, { 0, 17, 14, 6, 0 }, { 14, 0, 2, 11, 7 }, };
+		for (int e = 0; e < 7; e++) {
+			for (int f = 0; f < 5; f++) {
+				System.out.print(a[e][f] + " ");
+			};
+			System.out.println();
+		};
+		int[][] b = new int[7][5];
+		int n;
+		int k = 2;
+		int m = 7;
+		System.out.println("Rows to be changed: " + k + " and " + m);
+		for (int i = 0; i < 7; i++) {
+			for (int j = 0; j < 5; j++) {
+				if (i == k - 1) {
+					n = a[i][j];
+					b[i][j] = a[m - 1][j];
+					b[m - 1][j] = n;
+				} else if (i == m - 1) {
+					b[i][j] = a[k - 1][j];
+				} else {
+					b[i][j] = a[i][j];
+				}
+				;
+				System.out.print(b[i][j] + " ");
+			}
+			System.out.println();
+		};
+	}
+}
