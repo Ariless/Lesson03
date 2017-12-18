@@ -1,0 +1,32 @@
+import java.util.Random;
+
+public class Test5 {
+
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+		int a = 5;
+		int b = 5;
+		int[][] y = new int[a][b];
+		int count = 0;
+		int sum = 0;
+		Random rn = new Random();
+		for (int i = 0; i < a; i++) {
+			for (int f = 0; f < b; f++) {
+				y[i][f] = rn.nextInt(200);				
+				System.out.print(y[i][f] + " ");
+			};
+			System.out.println();
+		};
+		for (int i = 0; i < a; i++) {
+			for (int f = 0; f < b; f++) {
+				if (y[i][f] > 9 && y[i][f] < 100) {
+					sum = y[i][f] / 10 + y[i][f] % 10;
+					if (sum % 2 == 0) {
+						count = count + 1;
+					}
+				}
+			};
+		};
+		System.out.println(count);
+	}
+}
